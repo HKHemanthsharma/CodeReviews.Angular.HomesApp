@@ -1,0 +1,15 @@
+
+<section class="form-section" (submit)="OnSubmit()">
+        <form [formGroup]="filteringform">
+            <input  formControlName="apartment" type="text" placeholder="apartmentName">
+            <button class="primary" type="submit">Results</button>
+        </form>
+</section>
+<div class="Home-wrapper">
+    <section class="Results">
+        @for(house of filteredLocations; track house.id )
+        {
+            <app-housing-location [housingLocation]="house" class="card" ></app-housing-location>
+        }
+</section>
+</div>

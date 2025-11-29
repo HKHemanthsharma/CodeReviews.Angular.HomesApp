@@ -1,5 +1,7 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, Router} from '@angular/router';
+import { Inject } from '@angular/core';
+import{Home} from './home/home';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +11,13 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('Homes-app');
+  name:string="hemanth";
+constructor(private router:Router)
+{
+  
+}
+  Onclick()
+  {
+      this.router.navigate([""]);
+  }
 }

@@ -1,0 +1,17 @@
+
+.wrapper{
+    background-color:#1E3C99;
+}
+.brand-name{
+    background-color: rgb(255,255,255,0.1);
+    padding:1.4rem 1.2rem;
+    border: #768690 solid 0.5px;
+}
+
+.brand-logo{
+    scale:0.9;
+}
+
+.brand-logo:hover{
+    transform: scale(1.05);
+}

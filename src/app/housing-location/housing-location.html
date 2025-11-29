@@ -1,0 +1,9 @@
+<section class="card" (click)="navigateToDetails()">
+    <img [src]="housingLocation()?.photo" alt="image of the house">
+    <div class="about-content">
+        <h2>{{housingLocation()?.name}}</h2>
+        <p>Available Units: {{housingLocation()?.availableUnits}}</p>
+        <p>Address: State: {{housingLocation()?.state}}, {{housingLocation()?.city}}</p>
+    <!-- <a [routerLink]="['/details',housingLocation()?.id]">details></a> -->
+    </div>
+</section>

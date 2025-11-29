@@ -1,0 +1,50 @@
+<section class="details-section">
+    <div class="details-body">
+        <div class="image-section">
+            <img [src]="currentHousingLocation?.photo" alt="picture of the house">
+        </div>
+        <div class="two-column-layout">
+            <div class="content-section">
+                <h2>{{currentHousingLocation?.name}}</h2>
+                <h3>City: {{currentHousingLocation?.city}}</h3>
+                <h3>State: {{currentHousingLocation?.state}}</h3>
+                <h4>Number of available units: {{currentHousingLocation?.availableUnits}}</h4>
+                <h4>Features:</h4>
+                <ul>
+                    @if(currentHousingLocation?.wifi===true )
+                    {
+                        <li>Wifi: available</li>
+                    }
+                    @else
+                    {
+                        <li>Wifi: Unavailable</li>
+                    }
+                    @if(currentHousingLocation?.laundry=== true )
+                    {
+                        <li>Laundry: available</li>
+                    }
+                    @else
+                    {
+                        <li>Laundry: Unavailable</li>
+                    }                            
+                </ul>
+            </div>
+            <div class="formsection">
+                <form [formGroup]="bookingForm" (submit)="OnSubmit()">
+                    <h2>Book Your Room!!!</h2>
+                    <label for="first-name">FirstName:</label>
+                    <input formControlName="FirstName" id="first-name" type="text">
+                    
+                    <label for="last-name">LastName:</label>
+                    <input formControlName="LastName" id="last-name" type="text">
+                
+                    <label for="email">Email:</label>
+                    <input formControlName="email" id="email" type="text">
+                  
+                    <button class="submit-button" type="submit">Book</button>
+                </form>
+            </div>          
+        </div>
+    </div>
+</section>
+
